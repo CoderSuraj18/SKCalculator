@@ -50,13 +50,4 @@ jobs:
 
     - name: Success
       run: echo "Build Successful"
-
-    - name: Build EXE
-        run: |
-        pyinstaller --onefile --windowed calculator.py
-
-    - name: Upload EXE Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Calculator-EXE
-          path: dist/calculator.exe
+      
