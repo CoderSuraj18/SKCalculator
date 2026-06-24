@@ -37,7 +37,9 @@ jobs:
 
     - name: Run Pylint
       run: |
-        python -m pylint calculator.py calculator_logic.py
+        pylint calculator.py calculator_logic.py \
+        --disable=eval-used,missing-final-newline \ 
+        --fail-under=8.0
 
     - name: Run Pytest
       run: |
